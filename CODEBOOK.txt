@@ -1,0 +1,55 @@
+The final dataset "final_data" (180 observations, 68 variables),
+are presented below and are obtained by the code in "run_analysis.R"
+
+ [1] "subject"                                         "code"                                           
+ [3] "tBody_accelerometer.mean...X"                    "tBody_accelerometer.mean...Y"                   
+ [5] "tBody_accelerometer.mean...Z"                    "tGravity_accelerometer.mean...X"                
+ [7] "tGravity_accelerometer.mean...Y"                 "tGravity_accelerometer.mean...Z"                
+ [9] "tBody_accelerometerJerk.mean...X"                "tBody_accelerometerJerk.mean...Y"               
+[11] "tBody_accelerometerJerk.mean...Z"                "tBody_gyroscope.mean...X"                       
+[13] "tBody_gyroscope.mean...Y"                        "tBody_gyroscope.mean...Z"                       
+[15] "tBody_gyroscopeJerk.mean...X"                    "tBody_gyroscopeJerk.mean...Y"                   
+[17] "tBody_gyroscopeJerk.mean...Z"                    "tBody_accelerometerMag.mean.."                  
+[19] "tGravity_accelerometerMag.mean.."                "tBody_accelerometerJerkMag.mean.."              
+[21] "tBody_gyroscopeMag.mean.."                       "tBody_gyroscopeJerkMag.mean.."                  
+[23] "fBody_accelerometer.mean...X"                    "fBody_accelerometer.mean...Y"                   
+[25] "fBody_accelerometer.mean...Z"                    "fBody_accelerometer.meanFreq...X"               
+[27] "fBody_accelerometer.meanFreq...Y"                "fBody_accelerometer.meanFreq...Z"               
+[29] "fBody_accelerometerJerk.mean...X"                "fBody_accelerometerJerk.mean...Y"               
+[31] "fBody_accelerometerJerk.mean...Z"                "fBody_accelerometerJerk.meanFreq...X"           
+[33] "fBody_accelerometerJerk.meanFreq...Y"            "fBody_accelerometerJerk.meanFreq...Z"           
+[35] "fBody_gyroscope.mean...X"                        "fBody_gyroscope.mean...Y"                       
+[37] "fBody_gyroscope.mean...Z"                        "fBody_gyroscope.meanFreq...X"                   
+[39] "fBody_gyroscope.meanFreq...Y"                    "fBody_gyroscope.meanFreq...Z"                   
+[41] "fBody_accelerometerMag.mean.."                   "fBody_accelerometerMag.meanFreq.."              
+[43] "fBody_accelerometerJerkMag.mean.."               "fBody_accelerometerJerkMag.meanFreq.."          
+[45] "fBody_gyroscopeMag.mean.."                       "fBody_gyroscopeMag.meanFreq.."                  
+[47] "fBody_gyroscopeJerkMag.mean.."                   "fBody_gyroscopeJerkMag.meanFreq.."              
+[49] "angle.tBody_accelerometerMean.gravity."          "angle.tBody_accelerometerJerkMean..gravityMean."
+[51] "angle.tBody_gyroscopeMean.gravityMean."          "angle.tBody_gyroscopeJerkMean.gravityMean."     
+[53] "angle.X.gravityMean."                            "angle.Y.gravityMean."                           
+[55] "angle.Z.gravityMean."                            "tBody_accelerometer.std...X"                    
+[57] "tBody_accelerometer.std...Y"                     "tBody_accelerometer.std...Z"                    
+[59] "tGravity_accelerometer.std...X"                  "tGravity_accelerometer.std...Y"                 
+[61] "tGravity_accelerometer.std...Z"                  "tBody_accelerometerJerk.std...X"                
+[63] "tBody_accelerometerJerk.std...Y"                 "tBody_accelerometerJerk.std...Z"                
+[65] "tBody_gyroscope.std...X"                         "tBody_gyroscope.std...Y"                        
+[67] "tBody_gyroscope.std...Z"                         "tBody_gyroscopeJerk.std...X"                    
+[69] "tBody_gyroscopeJerk.std...Y"                     "tBody_gyroscopeJerk.std...Z"                    
+[71] "tBody_accelerometerMag.std.."                    "tGravity_accelerometerMag.std.."                
+[73] "tBody_accelerometerJerkMag.std.."                "tBody_gyroscopeMag.std.."                       
+[75] "tBody_gyroscopeJerkMag.std.."                    "fBody_accelerometer.std...X"                    
+[77] "fBody_accelerometer.std...Y"                     "fBody_accelerometer.std...Z"                    
+[79] "fBody_accelerometerJerk.std...X"                 "fBody_accelerometerJerk.std...Y"                
+[81] "fBody_accelerometerJerk.std...Z"                 "fBody_gyroscope.std...X"                        
+[83] "fBody_gyroscope.std...Y"                         "fBody_gyroscope.std...Z"                        
+[85] "fBody_accelerometerMag.std.."                    "fBody_accelerometerJerkMag.std.."               
+[87] "fBody_gyroscopeMag.std.."                        "fBody_gyroscopeJerkMag.std.."  
+All files were extracted from the zip file UCI HAR Dataset heirarchy.
+
+"subject" was obtained from the files "subject_text.txt" and "subject_train.txt", and were binded to the train and test tables.
+
+"Code" is a variable that shows the names of the differenta activities. It was imputed with the following code line, from the "activity_labels" table: 
+Data.mean.std$code <- activity_labels[Data.mean.std$code, 2]
+
+The remaining variables are means and standard deviations of the variables from the original data set. They were extracted from a larger data set containing multiple variables, after selecting only those with "mean" or "std" on their name.
